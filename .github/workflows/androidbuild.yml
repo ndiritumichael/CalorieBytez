@@ -1,11 +1,9 @@
 name : AndroidBuild
 on:
       pull_request:
-            branches:
-                  - master,develop
+            branches: [master,develop]
       push:
-            branches:
-                  - master,develop
+            branches: [master,develop]
 
       workflow_dispatch:
 
