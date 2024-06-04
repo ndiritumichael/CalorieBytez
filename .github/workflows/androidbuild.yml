@@ -5,6 +5,8 @@ on:
       push:
             branches: [master,develop]
 
+      workflow_dispatch:
+
 
 jobs:
       build:
@@ -18,6 +20,8 @@ jobs:
                     with:
                           java-version: '17'
                           distribution: 'temurin'
+                  - name: Make gradlew executable
+                    run: chmod +x ./gradlew
                   - name : Build With Gradle
                     run: ./gradlew build
 
