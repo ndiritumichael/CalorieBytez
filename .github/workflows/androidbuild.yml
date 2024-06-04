@@ -19,7 +19,7 @@ jobs:
                     uses: actions/checkout@v4.1.0
                     with:
                           java-version: '17'
-                          distribution: 'temurin'
+                          distribution: 'adopt'
                   - name: Make gradlew executable
                     run: chmod +x ./gradlew
                   - name : Build With Gradle
