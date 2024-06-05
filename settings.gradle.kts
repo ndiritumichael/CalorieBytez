@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -21,3 +22,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "CalorieBytez"
 include(":app")
+include(":domain")
+include(":data:network")
