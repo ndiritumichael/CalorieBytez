@@ -24,3 +24,4 @@ rootProject.name = "CalorieBytez"
 include(":app")
 include(":domain")
 include(":data:network")
+include(":data:database")
