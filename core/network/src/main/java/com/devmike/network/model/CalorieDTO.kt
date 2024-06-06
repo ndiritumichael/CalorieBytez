@@ -10,9 +10,9 @@ data class CalorieDTO(
     @SerialName("carbohydrates_total_g")
     val carbohydratesTotalG: Double,
     @SerialName("cholesterol_mg")
-    val cholesterolMg: Int,
+    val cholesterolMg: Double,
     @SerialName("fat_saturated_g")
-    val fatSaturatedG: Int,
+    val fatSaturatedG: Double,
     @SerialName("fat_total_g")
     val fatTotalG: Double,
     @SerialName("fiber_g")
@@ -20,13 +20,18 @@ data class CalorieDTO(
     @SerialName("name")
     val name: String,
     @SerialName("potassium_mg")
-    val potassiumMg: Int,
+    val potassiumMg: Double,
     @SerialName("protein_g")
     val proteinG: Double,
     @SerialName("serving_size_g")
-    val servingSizeG: Int,
+    val servingSizeG: Double,
     @SerialName("sodium_mg")
-    val sodiumMg: Int,
+    val sodiumMg: Double,
     @SerialName("sugar_g")
     val sugarG: Double,
+)
+
+@Serializable
+data class CalorieResponse(
+    val items: List<CalorieDTO>,
 )
