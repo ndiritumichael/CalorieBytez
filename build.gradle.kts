@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.hilt.plugin) apply false
     alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.room.compiler) apply false
 
     alias(libs.plugins.jlleitschuh)
     alias(libs.plugins.detekt)

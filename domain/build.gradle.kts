@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.caloriebytez.android.library)
+    alias(libs.plugins.kotlinX.serialization)
 }
 
 android {
@@ -17,4 +18,5 @@ android {
 }
 
 dependencies {
+    implementation(libs.kotlinx.serialization.json)
 }
