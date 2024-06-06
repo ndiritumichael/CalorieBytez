@@ -1,10 +1,10 @@
 plugins {
-    alias(libs.plugins.caloriebytez.android.library)
-    alias(libs.plugins.kotlinX.serialization)
+    alias(libs.plugins.caloriebytez.android.feature)
+    alias(libs.plugins.caloriebytez.library.compose)
 }
 
 android {
-    namespace = "com.devmike.network"
+    namespace = "com.devmike.commonui"
     compileSdk = 34
 
     buildTypes {
@@ -15,12 +15,12 @@ android {
                 "proguard-rules.pro",
             )
         }
-        buildFeatures {
-            buildConfig = true
-        }
+    }
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
 
 dependencies {
-    implementation(libs.bundles.ktor)
+    api(project(":domain"))
 }
