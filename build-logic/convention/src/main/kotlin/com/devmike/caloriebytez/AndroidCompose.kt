@@ -17,7 +17,7 @@ internal fun Project.configureAndroidCompose(
             add("implementation", platform(bom))
             add("androidTestImplementation", platform(bom))
             add("testImplementation", platform(bom))
-
+            add("androidTestImplementation", libs.findLibrary("androidx.ui.test.junit4").get())
             add("implementation", libs.findBundle("compose").get())
             add("debugImplementation", libs.findLibrary("androidx.ui.test.manifest").get())
             add("testImplementation", libs.findLibrary("androidx.ui.test.junit4").get())

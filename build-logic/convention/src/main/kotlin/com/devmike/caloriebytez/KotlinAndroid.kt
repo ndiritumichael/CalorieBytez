@@ -12,7 +12,7 @@ internal fun Project.configureKotlinAndroid(
         compileSdk = 34
 
         defaultConfig {
-            minSdk = 21
+            minSdk = 26
         }
 
         compileOptions {
@@ -26,7 +26,6 @@ internal fun Project.configureKotlinAndroid(
 
             add("androidTestImplementation", libs.findLibrary("androidx.espresso.core").get())
             add("androidTestImplementation", libs.findLibrary("androidx.junit").get())
-            add("androidTestImplementation", libs.findLibrary("androidx.ui.test.junit4").get())
 
             add("testImplementation", libs.findLibrary("junit").get())
         }

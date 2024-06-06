@@ -11,6 +11,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
+                apply("caloriebytez.android.library")
                 apply("caloriebytez.android.library.compose")
                 apply("caloriebytez.android.hilt")
             }

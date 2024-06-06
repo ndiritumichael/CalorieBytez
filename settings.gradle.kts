@@ -23,5 +23,10 @@ dependencyResolutionManagement {
 rootProject.name = "CalorieBytez"
 include(":app")
 include(":domain")
-include(":data:network")
-include(":data:database")
+include(":core:network")
+include(":core:database")
+include(":core:data")
+include(":feature:search")
+include(":feature:foodDetails")
+include(":feature:savedItems")
+include(":core:common-ui")
