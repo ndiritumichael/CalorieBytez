@@ -1,13 +1,14 @@
 plugins {
-    alias(libs.plugins.caloriebytez.android.library)
+    alias(libs.plugins.caloriebytez.android.feature)
+    alias(libs.plugins.caloriebytez.library.compose)
 }
 
 android {
-    namespace = "com.devmike.database"
+    namespace = "com.devmike.search"
     compileSdk = 34
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 26
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -22,11 +23,10 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+}
+
+dependencies {
+
+    implementation(project(":core:data"))
+    api(project(":core:common-ui"))
 }
