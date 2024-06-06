@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.devmike.caloriebytez"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -30,5 +30,12 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+
+    dependencies {
+        implementation(project(":feature:search"))
+        implementation(project(":feature:foodDetails"))
+        implementation(project(":feature:savedItems"))
+        implementation(project(":domain"))
     }
 }
