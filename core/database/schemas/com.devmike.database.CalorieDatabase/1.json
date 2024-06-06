@@ -1,0 +1,172 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "e8bc15b43dba6d64c8ee9af77330fe41",
+    "entities": [
+      {
+        "tableName": "calorie_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`calories` REAL NOT NULL, `carbohydratesTotalG` REAL NOT NULL, `cholesterolMg` REAL NOT NULL, `fatSaturatedG` REAL NOT NULL, `fatTotalG` REAL NOT NULL, `fiberG` REAL NOT NULL, `name` TEXT NOT NULL, `potassiumMg` REAL NOT NULL, `proteinG` REAL NOT NULL, `servingSizeG` REAL NOT NULL, `sodiumMg` REAL NOT NULL, `sugarG` REAL NOT NULL, PRIMARY KEY(`name`))",
+        "fields": [
+          {
+            "fieldPath": "calories",
+            "columnName": "calories",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "carbohydratesTotalG",
+            "columnName": "carbohydratesTotalG",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cholesterolMg",
+            "columnName": "cholesterolMg",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatSaturatedG",
+            "columnName": "fatSaturatedG",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fatTotalG",
+            "columnName": "fatTotalG",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fiberG",
+            "columnName": "fiberG",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "potassiumMg",
+            "columnName": "potassiumMg",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "proteinG",
+            "columnName": "proteinG",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "servingSizeG",
+            "columnName": "servingSizeG",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sodiumMg",
+            "columnName": "sodiumMg",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sugarG",
+            "columnName": "sugarG",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "name"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "recentSearchQueries",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`queryString` TEXT NOT NULL, `queriedDate` INTEGER NOT NULL, PRIMARY KEY(`queryString`))",
+        "fields": [
+          {
+            "fieldPath": "queryString",
+            "columnName": "queryString",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "queriedDate",
+            "columnName": "queriedDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "queryString"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "search_query_calorie_cross_ref",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`queryString` TEXT NOT NULL, `name` TEXT NOT NULL, PRIMARY KEY(`queryString`, `name`))",
+        "fields": [
+          {
+            "fieldPath": "queryString",
+            "columnName": "queryString",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "queryString",
+            "name"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_search_query_calorie_cross_ref_queryString",
+            "unique": false,
+            "columnNames": [
+              "queryString"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_search_query_calorie_cross_ref_queryString` ON `${TABLE_NAME}` (`queryString`)"
+          },
+          {
+            "name": "index_search_query_calorie_cross_ref_name",
+            "unique": false,
+            "columnNames": [
+              "name"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_search_query_calorie_cross_ref_name` ON `${TABLE_NAME}` (`name`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e8bc15b43dba6d64c8ee9af77330fe41')"
+    ]
+  }
+}
