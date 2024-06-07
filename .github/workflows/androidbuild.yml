@@ -35,14 +35,16 @@ jobs:
                   - name: Run ktlintCheck on the codebase
                     run: ./gradlew ktlintCheck
 
+                  - name: Build With Gradle
+                    run: ./gradlew build
+
                   - name: Run Unit Tests
                     run: ./gradlew clean test
 
                   - name: Run debug Build
                     run: ./gradlew assembleDebug
 
-                  - name : Build With Gradle
-                    run: ./gradlew build
+
 
                   - name: Upload a Build Artifact
                     uses: actions/upload-artifact@v4.3.3
