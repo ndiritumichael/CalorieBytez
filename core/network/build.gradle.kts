@@ -44,5 +44,5 @@ dependencies {
     implementation(libs.bundles.ktor)
     implementation(libs.kotlinx.serialization.json)
     api(project(":domain"))
-    testImplementation(libs.ktor.mock)
+    testApi(project(":core:testing"))
 }
