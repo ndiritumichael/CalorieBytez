@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.spotless)
     alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.module.graph) apply true
 }
 
 subprojects {
