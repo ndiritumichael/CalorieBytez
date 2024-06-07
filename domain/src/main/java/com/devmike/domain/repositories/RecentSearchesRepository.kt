@@ -1,4 +1,4 @@
-package com.devmike.data.repository
+package com.devmike.domain.repositories
 
 import kotlinx.coroutines.flow.Flow
 
