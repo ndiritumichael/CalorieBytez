@@ -11,8 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.devmike.caloriebytez.ui.navigation.AppNavigation
-import com.devmike.caloriebytez.ui.navigation.CalorieBottomBar
+import com.devmike.caloriebytez.navigation.AppNavigation
+import com.devmike.caloriebytez.navigation.CalorieBottomBar
 import com.devmike.caloriebytez.ui.theme.CalorieBytezTheme
 import dagger.hilt.android.AndroidEntryPoint
 

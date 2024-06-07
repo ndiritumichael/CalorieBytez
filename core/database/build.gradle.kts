@@ -33,5 +33,8 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     implementation(libs.room.testing)
+    implementation(libs.androidx.test.ext)
     ksp(libs.room.compiler)
+
+    testApi(project(":core:testing"))
 }

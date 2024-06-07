@@ -4,9 +4,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
-import com.devmike.data.repository.CaloriesRepository
 import com.devmike.domain.models.AppDestinations
 import com.devmike.domain.models.CalorieModel
+import com.devmike.domain.repositories.CaloriesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

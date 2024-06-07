@@ -27,4 +27,6 @@ dependencies {
     api(project(":domain"))
     implementation(project(":core:network"))
     implementation(project(":core:database"))
+
+    testImplementation(project(":core:testing"))
 }

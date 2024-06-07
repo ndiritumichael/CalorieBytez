@@ -20,4 +20,5 @@ android {
 dependencies {
     implementation(project(":core:data"))
     api(project(":core:common-ui"))
+    testImplementation(project(":core:testing"))
 }

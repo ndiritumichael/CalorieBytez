@@ -9,7 +9,10 @@ import com.devmike.database.entities.RecentSearchEntity
 import com.devmike.database.entities.SearchQueryCalorieCrossRef
 import com.devmike.domain.models.AppErrors
 import com.devmike.domain.models.CalorieModel
+import com.devmike.domain.repositories.CaloriesRepository
 import com.devmike.network.datasource.CalorieNetworkSource
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import java.time.Instant
 import javax.inject.Inject
 
@@ -55,7 +58,11 @@ class CaloriesRepositoryImpl
             return calorieDao.getCalorieById(name)?.toCalorieModel()
         }
 
-        private suspend fun saveNetworkCalorieDb(
+    override fun getAllCalories(): Flow<List<CalorieModel>> = calorieDao.getAllCalories().map { calorieEntities ->
+        calorieEntities.map { it.toCalorieModel() }
+    }
+
+    private suspend fun saveNetworkCalorieDb(
             query: String,
             calories: List<CalorieModel>,
         ) {
