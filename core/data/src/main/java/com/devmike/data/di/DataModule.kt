@@ -1,9 +1,9 @@
 package com.devmike.data.di
 
-import com.devmike.data.repository.CaloriesRepository
 import com.devmike.data.repository.CaloriesRepositoryImpl
-import com.devmike.data.repository.RecentSearchesRepository
 import com.devmike.data.repository.RecentSearchesRepositoryImpl
+import com.devmike.domain.repositories.CaloriesRepository
+import com.devmike.domain.repositories.RecentSearchesRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
