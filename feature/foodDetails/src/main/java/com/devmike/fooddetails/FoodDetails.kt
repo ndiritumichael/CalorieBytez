@@ -1,5 +1,6 @@
 package com.devmike.fooddetails
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -37,7 +38,9 @@ fun FoodDetails(calorieModel: CalorieModel) {
     Column(
         modifier = Modifier.padding(16.dp).fillMaxSize().verticalScroll(rememberScrollState()),
     ) {
-        CalorieItemScreen(calorieModel.calories)
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+            CalorieItemScreen(calorieModel.calories)
+        }
 
         NutritionDetailItem(
             modifier = Modifier,
