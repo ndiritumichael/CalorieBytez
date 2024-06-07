@@ -36,10 +36,5 @@ dependencies {
     implementation(libs.androidx.test.ext)
     ksp(libs.room.compiler)
 
-    testImplementation(libs.robolectric)
-
-    testImplementation(libs.androidx.arch.core.testing)
-    testImplementation(libs.kotlinx.coroutines.test)
-    implementation(libs.core.ktx)
-    testImplementation(libs.truth)
+    testApi(project(":core:testing"))
 }
