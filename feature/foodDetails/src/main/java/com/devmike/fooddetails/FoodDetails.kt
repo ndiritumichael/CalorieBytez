@@ -12,11 +12,13 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Dining
+import androidx.compose.material.icons.filled.Earbuds
 import androidx.compose.material.icons.filled.EggAlt
-import androidx.compose.material.icons.filled.Fastfood
+import androidx.compose.material.icons.filled.EnergySavingsLeaf
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FitnessCenter
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.LineAxis
+import androidx.compose.material.icons.filled.LocalParking
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -58,31 +60,31 @@ fun FoodDetails(calorieModel: CalorieModel) {
         )
         NutritionDetailItem(
             modifier = Modifier,
-            icon = Icons.Default.Fastfood,
+            icon = Icons.Default.EggAlt,
             value = "${calorieModel.proteinG}g",
             label = "Protein",
         )
         NutritionDetailItem(
             modifier = Modifier,
-            icon = Icons.Default.Search,
+            icon = Icons.Default.Earbuds,
             value = "${calorieModel.sodiumMg}mg",
             label = "Sodium",
         )
         NutritionDetailItem(
             modifier = Modifier,
-            icon = Icons.Default.EggAlt,
+            icon = Icons.Default.EnergySavingsLeaf,
             value = "${calorieModel.sugarG}g",
             label = "Sugar",
         )
         NutritionDetailItem(
             modifier = Modifier,
-            icon = Icons.Default.Search,
+            icon = Icons.Default.LocalParking,
             value = "${calorieModel.potassiumMg}mg",
             label = "Potassium",
         )
         NutritionDetailItem(
             modifier = Modifier,
-            icon = Icons.Default.Search,
+            icon = Icons.Default.LineAxis,
             value = "${calorieModel.fiberG}g",
             label = "Fiber",
         )
