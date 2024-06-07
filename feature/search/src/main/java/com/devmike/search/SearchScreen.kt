@@ -25,6 +25,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
+import com.devmike.commonui.sharedui.ErrorScreen
+import com.devmike.commonui.sharedui.FoodList
 import com.devmike.domain.models.CalorieModel
 import com.devmike.domain.models.FetchItemState
 
@@ -72,7 +74,9 @@ fun SearchScreen(
 
             when (val state = calorieSearchState) {
                 is FetchItemState.Error -> {
-                    Text(state.err.message)
+                    ErrorScreen(state.err) {
+                        searchViewModel.searchCalories()
+                    }
                 }
 
                 is FetchItemState.Idle -> {
@@ -98,7 +102,7 @@ fun SearchScreen(
                 }
 
                 is FetchItemState.Success -> {
-                    com.devmike.commonui.sharedui.FoodList(state.data, onFoodItemClicked)
+                    FoodList(Modifier, state.data, onFoodItemClicked)
                 }
             }
         }

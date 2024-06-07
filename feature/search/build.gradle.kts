@@ -29,4 +29,5 @@ dependencies {
 
     implementation(project(":core:data"))
     api(project(":core:common-ui"))
+    implementation(project(":core:testing"))
 }
