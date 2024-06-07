@@ -42,7 +42,7 @@ class CaloriesRepositoryImplTest {
             )
     }
 
-    @Test
+     @Test
     fun` getCalories cachedQueryExists returnsSuccessWithCachedData`() =
         runTest {
             val query = SampleSearchEntity.tomatowithpizza.queryString
@@ -59,17 +59,13 @@ class CaloriesRepositoryImplTest {
 
             coEvery { mockSearchQueryDao.getSearchQueryWithCalories(query) } returns listOf(cachedSearchQuery)
 
-            coEvery {
-                mockSearchQueryDao.getSearchQueryWithCalories("mikke")
-            } returns emptyList()
-            val flowrst = mockSearchQueryDao.getSearchQueryWithCalories("mikke")
+            mockSearchQueryDao.getSearchQueryWithCalories(query)
 
-            print("the flow result is $flowrst")
             coVerify {
                 mockNetworkSource wasNot called
             }
             coVerify {
-                mockSearchQueryDao.getSearchQueryWithCalories("mikke")
+                mockSearchQueryDao.getSearchQueryWithCalories(query)
             }
 
             val result = repository.getCalories(query)
