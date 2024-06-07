@@ -14,8 +14,8 @@ interface CrossRefDao {
     @Query("DELETE FROM search_query_calorie_cross_ref WHERE queryString = :searchId")
     suspend fun deleteBySearchId(searchId: String)
 
-    @Query("DELETE FROM search_query_calorie_cross_ref WHERE name = :calorieId")
-    suspend fun deleteByCalorieId(calorieId: Long)
+    @Query("DELETE FROM search_query_calorie_cross_ref WHERE name = :caloriename")
+    suspend fun deleteByCalorieId(caloriename: String)
 
     @Query("DELETE FROM search_query_calorie_cross_ref")
     suspend fun deleteAll()

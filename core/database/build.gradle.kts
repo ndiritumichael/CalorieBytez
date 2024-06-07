@@ -33,5 +33,13 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     implementation(libs.room.testing)
+    implementation(libs.androidx.test.ext)
     ksp(libs.room.compiler)
+
+    testImplementation(libs.robolectric)
+
+    testImplementation(libs.androidx.arch.core.testing)
+    testImplementation(libs.kotlinx.coroutines.test)
+    implementation(libs.core.ktx)
+    testImplementation(libs.truth)
 }
