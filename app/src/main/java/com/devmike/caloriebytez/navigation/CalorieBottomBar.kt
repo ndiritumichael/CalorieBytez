@@ -1,4 +1,4 @@
-package com.devmike.caloriebytez.ui.navigation
+package com.devmike.caloriebytez.navigation
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.material3.BottomAppBar
