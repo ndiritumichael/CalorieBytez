@@ -25,6 +25,22 @@ jobs:
                           distribution: 'adopt'
                   - name: Make gradlew executable
                     run: chmod +x ./gradlew
+
+                  - name: Get local.properties from secrets
+                    run: echo "${{secrets.LOCAL_PROPERTIES }}" > $GITHUB_WORKSPACE/local.properties
+
+                  - name: Run ktlintFormat on the codebase
+                    run: ./gradlew ktlintFormat
+
+                  - name: Run ktlintCheck on the codebase
+                    run: ./gradlew ktlintCheck
+
+                  - name: Run Unit Tests
+                    run: ./gradlew clean test
+
+                  - name: Run debug Build
+                    run: ./gradlew assembleDebug
+
                   - name : Build With Gradle
                     run: ./gradlew build
 

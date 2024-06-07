@@ -114,14 +114,14 @@ complexity:
     threshold: 600
   LongMethod:
     active: true
-    threshold: 60
+    threshold: 100
   LongParameterList:
     active: true
-    functionThreshold: 6
+    functionThreshold: 7
     constructorThreshold: 7
     ignoreDefaultParameters: false
     ignoreDataClasses: true
-    ignoreAnnotatedParameter: []
+    ignoreAnnotatedParameter: [ 'Composable']
   MethodOverloading:
     active: false
     threshold: 6
@@ -167,7 +167,7 @@ coroutines:
   SleepInsteadOfDelay:
     active: false
   SuspendFunWithFlowReturnType:
-    active: false
+    active: true
 
 empty-blocks:
   active: true
@@ -228,7 +228,7 @@ exceptions:
     active: true
     ignoreLabeled: false
   SwallowedException:
-    active: true
+    active: false
     ignoredExceptionTypes:
       - 'InterruptedException'
       - 'MalformedURLException'
@@ -255,7 +255,7 @@ exceptions:
   ThrowingNewInstanceOfSameException:
     active: true
   TooGenericExceptionCaught:
-    active: true
+    active: false
     excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**']
     exceptionNames:
       - 'ArrayIndexOutOfBoundsException'
@@ -310,7 +310,7 @@ formatting:
     autoCorrect: true
     layout: '*,java.**,javax.**,kotlin.**,^'
   Indentation:
-    active: true
+    active: false
     autoCorrect: true
     indentSize: 4
     continuationIndentSize: 4
@@ -730,7 +730,7 @@ style:
     active: false
   ReturnCount:
     active: true
-    max: 2
+    max: 4
     excludedFunctions: 'equals'
     excludeLabeled: false
     excludeReturnFromLambda: true
@@ -751,7 +751,7 @@ style:
     active: false
     acceptableLength: 4
   UnnecessaryAbstractClass:
-    active: true
+    active: false
   UnnecessaryAnnotationUseSiteTarget:
     active: false
   UnnecessaryApply:
