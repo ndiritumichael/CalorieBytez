@@ -24,6 +24,7 @@ ktlint = "11.6.1"
 ktor = "2.3.7"
 lifecycleRuntimeKtx = "2.8.1"
 lottie = "6.0.0"
+mockk = "1.13.11"
 robolectric = "4.12.2"
 room = "2.6.1"
 spotless = "6.4.2"
@@ -71,6 +72,7 @@ hilt-android= { module = "com.google.dagger:hilt-android",version.ref = "hilt"}
 hilt-testing= { module = "'com.google.dagger:hilt-android-testing",version.ref = "hilt"}
 
 #room
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-testing = {module = "androidx.room:room-testing",version.ref = "room"}
