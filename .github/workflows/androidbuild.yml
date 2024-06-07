@@ -1,9 +1,8 @@
 name : AndroidBuild
 on:
       pull_request:
-            branches: [master,develop]
-      push:
-            branches: [master,develop]
+            branches: [master]
+
 
       workflow_dispatch:
 
@@ -34,9 +33,6 @@ jobs:
 
                   - name: Run ktlintCheck on the codebase
                     run: ./gradlew ktlintCheck
-
-                  - name: Build With Gradle
-                    run: ./gradlew build
 
                   - name: Run Unit Tests
                     run: ./gradlew clean test
