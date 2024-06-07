@@ -29,12 +29,13 @@ import com.devmike.domain.models.CalorieModel
 
 @Composable
 fun FoodList(
+    modifier: Modifier = Modifier,
     ingredients: List<CalorieModel>,
     onFoodItemClicked: (name: String) -> Unit,
 ) {
     LazyColumn(
         modifier =
-            Modifier
+            modifier
                 .fillMaxWidth()
                 .padding(8.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),
