@@ -104,7 +104,6 @@ The app includes unit tests for all modules, Instrumented tests are ran as unit 
     * [GitHub Actions](https://github.com/features/actions)
 
 ## ScreenShots
-## Screenshots with Descriptions in Columns
 
 | Loading | Recent Searches | Food List |
 |---|---|---|
